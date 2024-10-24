@@ -1,0 +1,245 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #020d29;
+  overflow-x: hidden;
+}
+
+.introduction {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #020d29;
+  position: absolute;
+  font-family: "barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.introduction a {
+  color: #90008e;
+}
+
+.introduction a:hover {
+  color: #ffc0fe;
+}
+
+#buttonContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border: none;
+  background-color: #f134ee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  z-index: 999;
+  font-size: 20px;
+}
+
+#buttonContainer button:hover {
+
+  background-color: #f134ee;
+
+}
+
+.fadeout {
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
+#areYouSureText {
+  max-width: 50vw;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 0%;
+  font-size: 30px;
+  z-index: 99;
+  color: #f134ee;
+}
+
+.fadeInOut {
+  animation: inOut 7s ease-in-out;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+
+@keyframes inOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#collectedTimeText {
+  color: white;
+  max-width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: none;
+  opacity: 0%;
+  font-size: large;
+  opacity: 0;
+  font-size: 30px;
+  z-index: 99;
+  color: #f134ee;
+}
+
+.fadeIn {
+  animation: fadeIn 9s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* ____ */
+
+* {
+  box-sizing: border-box;
+}
+
+.docMain {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 150px;
+  font-family: "barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.section {
+  max-width: 50vw;
+  padding: 20px;
+  border: none;
+  position: relative;
+  color: #f134ee;
+  min-height: 100vh;
+}
+
+.sticky-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 8;
+  background: #020d29;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+#contentStyle1 {
+  font-size: 30px;
+}
+
+#contentStyle2 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 40vh;
+  margin-bottom: 100px;
+
+}
+
+#contentStyle3 {
+  font-size: 30px;
+  padding: 30px;
+  margin-top: 50vh;
+  border: #f134ee 2px solid;
+}
+
+#footnote {
+  font-size: 14px;
+  padding: 30px;
+  position: absolute !important;
+  width: 250px;
+  top: 120vh;
+  left: -300px;
+}
+
+/* arrow from https://unused-css.com/blog/animated-down-arrow/ */
+.down-arrow {
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 14px);
+  width: 0;
+  height: 35px;
+  border: 2px solid #f134ee;
+  border-radius: 2px;
+}
+
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid #f134ee;
+  border-right: 4px solid #f134ee;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 20px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+.down-arrow {
+  animation: jumpInfinite 3s infinite;
+}
